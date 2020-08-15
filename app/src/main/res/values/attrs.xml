@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircularProgressView">
+
+        <!-- The stroke width of the progress indication. It will
+        fallback to the default value if the stroke width becomes larger than the radius -->
+        <attr name="cpv_strokeWidth" format="reference|dimension"/>
+
+        <!-- The tint color of the animation -->
+        <attr name="cpv_tint" format="reference|color"/>
+    </declare-styleable>
+
+</resources>

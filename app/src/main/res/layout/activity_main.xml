@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <dev.luboganev.progress.view.CircularProgressView
+        android:id="@+id/progressView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ring stroke width dp"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/strokeWidthSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="8"
+        android:max="48"
+        android:padding="16dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ring stroke color (RGB)"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/colorRedSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="255"
+        android:padding="16dp" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/colorGreenSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="255"
+        android:padding="16dp" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/colorBlueSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="255"
+        android:padding="16dp" />
+
+</LinearLayout>
