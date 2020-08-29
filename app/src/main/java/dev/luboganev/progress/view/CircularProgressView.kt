@@ -15,6 +15,7 @@ import dev.luboganev.progress.R
 class CircularProgressView : View {
 
     private val drawable: CircularProgressDrawable = CircularProgressDrawable()
+    private val classInitializedCheck: Unit? = Unit
 
     constructor(context: Context) : super(context) {
         initCustomView(context, null)
@@ -77,6 +78,14 @@ class CircularProgressView : View {
 
     override fun onVisibilityChanged(changedView: View, visibility: Int) {
         super.onVisibilityChanged(changedView, visibility)
+
+        // This method gets called on some Android versions and some phone vendors
+        // in the super constructor. Due to how Kotlin works, it means that drawable
+        // will be null, although it is initialized in this class. To prevent runtime
+        // null pointer exceptions caused by this, we use a simple val and we check if
+        // it is initialized, before doing anything else.
+        if (classInitializedCheck == null) return
+
         if (visibility == VISIBLE && isAttachedToWindow) {
             drawable.start()
         } else {
