@@ -50,7 +50,6 @@ android {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk7"))
     implementation(AndroidX.core)
     implementation(AndroidX.appCompat)
     implementation(AndroidX.constraintLayout)
